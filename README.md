@@ -406,3 +406,12 @@ Berdasarkan hasil pengujian, program berhasil menjalankan fitur utama yang dimin
 7. Admin dapat menjalankan emergency shutdown.
 8. Seluruh aktivitas tercatat pada file `history.log`.
 
+## Kendala yang Dihadapi
+
+Selama pengerjaan **Soal 1 – The Wired**, terdapat beberapa kendala yang dialami, di antaranya:
+
+### 1. Sinkronisasi Komunikasi Antar Client
+Pada awal implementasi, pesan yang dikirim oleh satu client tidak langsung diterima oleh client lain. Hal ini disebabkan oleh mekanisme broadcast pada server yang belum berjalan dengan benar. Kendala ini diatasi dengan memperbaiki alur pengiriman pesan agar dapat diteruskan ke seluruh client yang terhubung.
+
+### 2. Validasi Username Unik
+Kendala lain adalah memastikan setiap user memiliki username yang unik. Pada awalnya, sistem masih memperbolehkan penggunaan nama yang sama oleh beberapa client. Hal ini kemudian diperbaiki dengan menambahkan pengecekan di sisi server untuk menolak username yang sudah digunakan.
